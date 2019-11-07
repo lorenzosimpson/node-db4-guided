@@ -29,6 +29,15 @@ exports.up = function(knex) {
       .unsigned()
       .references('id')
       .inTable('zoos')
+
+      tbl.integer('animal_id')
+      .unsigned()
+      .references('id')
+      .inTable('animals')
+
+      tbl.string('from').notNullable();
+      
+      tbl.string('to')
   })
 
 };
